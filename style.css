@@ -1,0 +1,11 @@
+div {
+  width: 5em;
+  height: 5em;
+  display: inline-block;
+  background-color: #E6D50B;
+}
+
+#row1 {
+  width: 36.5em;
+  border: 1px solid black;
+}
