@@ -11,20 +11,24 @@ $('#1x1, #1x2, #1x3, #1x4, #1x5, #1x6, #1x7, #2x1, #2x2, #2x3, #2x4, #2x5, #2x6,
   console.log('The user has clicked ' + clicks + ' times.');
 });
 
+$('#1x1, #2x1, #3x1, #4x1, #5x1, #6x1, #7x1').on('click', function() {
+  $('#hole1x1').css('background-color', 'red');
+});
+
 $('#1x1, #1x2, #1x3, #1x4, #1x5, #1x6, #1x7, #2x1, #2x2, #2x3, #2x4, #2x5, #2x6, #2x7, #3x1, #3x2, #3x3, #3x4, #3x5, #3x6, #3x7, #4x1, #4x2, #4x3, #4x4, #4x5, #4x6, #4x7, #5x1, #5x2, #5x3, #5x4, #5x5, #5x6,  #5x7, #6x1, #6x2, #6x3, #6x4, #6x5, #6x6, #6x7').mouseover(function() {
   if (clicks === 0) {
     // 1 X 1
-    $('#1x1').mouseover(function() {
+    $('#1x1, #2x1, #3x1, #4x1, #5x1, #6x1, #7x1').mouseover(function() {
       $('#hole1x1').css('background-color', 'red');
     });
-    $('#1x1').mouseout(function() {
+    $('#1x1, #2x1, #3x1, #4x1, #5x1, #6x1, #7x1').mouseout(function() {
       $('#hole1x1').css('background-color', 'white');
     });
-  } else {
-    $('#1x1').mouseover(function() {
+  } if (clicks === 1) {
+    $('#1x1, #2x1, #3x1, #4x1, #5x1, #6x1, #7x1').mouseover(function() {
       $('#hole1x1').css('background-color', 'black');
     });
-    $('#1x1').mouseout(function() {
+    $('#1x1, #2x1, #3x1, #4x1, #5x1, #6x1, #7x1').mouseout(function() {
       $('#hole1x1').css('background-color', 'white');
     });
   }
