@@ -13,6 +13,24 @@ div {
   margin-right: auto;
 }
 
+#drop-zone {
+  width: 36.5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#top1, #top2, #top3, #top4, #top5, #top6, #top7 {
+  background-color: #fff;
+}
+
+.drop-hole {
+  width: 4.5em;
+  height: 4.5em;
+  background-color: #fff;
+  border-radius: 90%;
+  border: 4px solid #fff;
+}
+
 .hole {
   width: 4.5em;
   height: 4.5em;
