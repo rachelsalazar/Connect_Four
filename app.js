@@ -5,8 +5,12 @@ $('.hole').mouseover(function(){
   var mouseLocation = $(this).attr("class");
   console.log(mouseLocation);
 
-  $(".drop-hole" + mouseLocation)
+  if ($(this).hasClass("column1")) {
+  	$("#drop-hole1").css("background-color", "#000");
+  }
+  
 });
+
 
 // var clicks = 0;
 
