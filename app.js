@@ -1,15 +1,11 @@
 'use strict';
 
-
 $('.hole').mouseover(function(){
-  var mouseLocation = $(this).attr("class");
+  var mouseLocation = $(this).attr("class")[5];
   console.log(mouseLocation);
 
-  if ($(this).hasClass("column1")) {
-  	$("#drop-hole1").css("background-color", "#000");
-  }
-  
-});
+  	$("#drop-hole" + mouseLocation).css("background-color", "#000");
+  });
 
 
 // var clicks = 0;
