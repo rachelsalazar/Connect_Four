@@ -38,3 +38,7 @@ div {
   border-radius: 90%;
   border: 4px solid #e6d50b;
 }
+
+.black-background {
+  background-color: #000;
+}

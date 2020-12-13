@@ -4,7 +4,8 @@ $('.hole').mouseover(function(){
   var mouseLocation = $(this).attr("class")[5];
   console.log(mouseLocation);
 
-  	$("#drop-hole" + mouseLocation).css("background-color", "#000");
+  	$("#drop-hole" + mouseLocation).addClass("black-background");
+
   });
 
 
