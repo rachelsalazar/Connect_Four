@@ -2,7 +2,10 @@
 
 var clicks = 0;
 var notLocation =["1", "2", "3", "4", "5", "6", "7"];
+var mouseLocation = 0;
 
+
+// TRACKING WHICH PLAYERS TURN IT IS
 
 $("body").on("click", function() {
   clicks++;
@@ -11,9 +14,10 @@ $("body").on("click", function() {
   }
 });
 
+// PIECE HOVERS OVER MOUSE LOCATION
 
-$('.hole').mouseover(function(){
-  var mouseLocation = $(this).attr("class")[5];
+$(".hole").mouseover(function(){
+  mouseLocation = $(this).attr("class")[5];
 
   	if (clicks === 0) {
   		$("#drop-hole" + mouseLocation).addClass("black-background");
@@ -27,6 +31,13 @@ $('.hole').mouseover(function(){
   			$("#drop-hole" + notLocation[i]).removeClass("red-background");
   		};
   	};
+});
+
+// ON CLICK REMOVING PIECE FROM DROPHOLE
+
+$("body").on("click", function(){
+	$("#drop-hole" + mouseLocation).removeClass("black-background");
+	$("#drop-hole" + mouseLocation).removeClass("red-background");
 });
 
 
