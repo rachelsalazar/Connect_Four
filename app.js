@@ -1,24 +1,35 @@
 'use strict';
 
+var clicks = 0;
+var notLocation =["1", "2", "3", "4", "5", "6", "7"];
+
+
+$("body").on("click", function() {
+  clicks++;
+  if (clicks > 1) {
+    clicks = 0;
+  }
+});
+
+
 $('.hole').mouseover(function(){
   var mouseLocation = $(this).attr("class")[5];
-  console.log(mouseLocation);
 
-  	$("#drop-hole" + mouseLocation).addClass("black-background");
+  	if (clicks === 0) {
+  		$("#drop-hole" + mouseLocation).addClass("black-background");
+  	} else {
+		$("#drop-hole" + mouseLocation).addClass("red-background");
+	};
 
-  });
+  	for (var i = 0; i <= notLocation.length - 1; i++) {
+  		if (notLocation[i] !== mouseLocation) {
+  			$("#drop-hole" + notLocation[i]).removeClass("black-background");
+  			$("#drop-hole" + notLocation[i]).removeClass("red-background");
+  		};
+  	};
+});
 
 
-// var clicks = 0;
-
-
-// $('#1x1, #1x2, #1x3, #1x4, #1x5, #1x6, #1x7, #2x1, #2x2, #2x3, #2x4, #2x5, #2x6, #2x7, #3x1, #3x2, #3x3, #3x4, #3x5, #3x6, #3x7, #4x1, #4x2, #4x3, #4x4, #4x5, #4x6, #4x7, #5x1, #5x2, #5x3, #5x4, #5x5, #5x6,  #5x7, #6x1, #6x2, #6x3, #6x4, #6x5, #6x6, #6x7').on('click', function() {
-//   clicks++;
-//   if (clicks > 1) {
-//     clicks = 0;
-//   }
-//   console.log('The user has clicked ' + clicks + ' times.');
-// });
 
 // var hole6x1Filled = 'white';
 // var hole5x1Filled = 'white';
