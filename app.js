@@ -3,6 +3,9 @@
 var clicks = 0;
 var notLocation =["1", "2", "3", "4", "5", "6", "7"];
 var mouseLocation = 0;
+var column1 = [];
+var column2 = [];
+
 
 
 // TRACKING WHICH PLAYERS TURN IT IS
@@ -40,6 +43,13 @@ $("body").on("click", function(){
 	$("#drop-hole" + mouseLocation).removeClass("red-background");
 });
 
+// FILL HOLE ON CLICK OF COLUMN
+
+$(".hole").on("click", function(){
+	console.log(mouseLocation);
+
+
+});
 
 
 // var hole6x1Filled = 'white';
