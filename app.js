@@ -3,8 +3,7 @@
 var clicks = 0;
 var notLocation =["1", "2", "3", "4", "5", "6", "7"];
 var mouseLocation = 0;
-var column1 = [];
-var column2 = [];
+var column = [];
 
 
 
@@ -44,11 +43,9 @@ $("body").on("click", function(){
 });
 
 // FILL HOLE ON CLICK OF COLUMN
-
 $(".hole").on("click", function(){
-	console.log(mouseLocation);
-
-
+	column.push(mouseLocation);
+	console.log(column);
 });
 
 
